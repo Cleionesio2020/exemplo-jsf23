@@ -1,0 +1,19 @@
+.container{
+    margin-top: 15px
+}
+.footer {
+    position:absolute;
+    bottom:0;
+    width:100%;
+    text-align: center;
+    border-top:  solid #cccccc 1px;
+    font-size: 14px
+
+}
+.span{
+    padding:10px;color: #cccccc
+}
+
+.user_card{
+    margin-top:10%
+}

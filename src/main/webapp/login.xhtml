@@ -1,0 +1,47 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <h:body>
+
+        <ui:composition template="/layout/main.xhtml">
+
+            <ui:define name="content">
+                <div class="container h-100">
+                    <div class="d-flex justify-content-center h-100">
+                        <div class="user_card">
+                            
+                            <div class="d-flex justify-content-center form_container">
+                                <h:form>
+                                    <h:outputLabel value="Login"/>
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text"><i class="fa fa-user"></i></span>
+                                        </div>
+                                        
+                                        <h:inputText class="form-control input_user" value="#{usuarioBean.usuario.login}" size="30"/>
+                                    </div>
+                                    
+                                    <h:outputLabel value="Senha"/>
+                                    <div class="input-group mb-2">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text"><i class="fa fa-key"></i></span>
+                                        </div>
+                                        <h:inputSecret class="form-control input_pass" value="#{usuarioBean.usuario.senha}" size="30"/>
+                                    </div>
+                                    <div class="d-flex justify-content-center mt-3 login_container">
+                                        
+                                        <h:commandButton value="Entrar"  styleClass="btn btn-primary btn-block" actionListener="#{usuarioBean.logar()}"/>
+                                    </div>
+                                </h:form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ui:define>
+
+        </ui:composition>
+
+    </h:body>
+
+</html>

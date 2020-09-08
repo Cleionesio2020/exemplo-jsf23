@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:body>
+
+        <ui:composition template="/layout/main.xhtml">
+
+            <ui:define name="content">
+                <div class="container">
+                    <div class="jumbotron">
+                        <h4> Classe jumbotrom botstrap</h4>
+                    </div>
+                    <br />
+                    <h:form>
+                        <h3>Testando suporte para Inteface Map no DataTable:</h3>
+                        <h:dataTable value="#{helloBean.mapaCursos}" var="item" class="table">
+
+                            <h:column>
+                                <f:facet name="header">Chave do item</f:facet>
+                                    #{item.key}
+                            </h:column>
+
+                            <h:column>
+                                <f:facet name="header">Valor do item</f:facet>
+                                    #{item.value}
+                            </h:column>
+
+                            <h:column>
+                                <f:facet name="header">Opções</f:facet>
+                                <h:commandLink  class="fa fa-pencil-square-o" />
+
+                                <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                <i class="fa fa-plus" aria-hidden="true"></i>
+                            </h:column>
+
+                        </h:dataTable>
+                    </h:form>
+                </div>
+            </ui:define>
+
+        </ui:composition>
+
+    </h:body>
+
+</html>
+
